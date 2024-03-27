@@ -1,13 +1,13 @@
 import React from "react";
 
-const Jumbotron = () => {
+const Jumbotron = ({props}) => {
     return (
         <>
             <div className="p-5 mb-4 bg-light rounded-3">
             <div className="container-fluid py-5">
-                <h1 className="display-5 fw-bold">Bienvenida a la Feria del Comic</h1>
-                <p className="col-md-8 fs-4">Como ya sabrás se han abierto nuevas fechas en Barcelona, Madrid, Vitoria-Gasteiz y Lugo. ¡Corre y no pierdas tu entrada!</p>
-                <button className="btn btn-primary btn-lg" type="button">Más info</button>
+                <h1 className="display-5 fw-bold">{props.titulo}</h1>
+                <p className="col-md-12 fs-4">{props.parrafo}</p>
+                <button className="btn btn-primary btn-lg" type="button" onClick={props.handleClick}>{props.boton}</button>
             </div>
             </div>      
         </>
