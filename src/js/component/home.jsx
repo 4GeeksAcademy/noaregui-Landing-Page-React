@@ -50,6 +50,7 @@ const Home = () => {
 				<Jumbotron props={jumbotronLanding}/>
 			</div>
 				<Card atributoImagenes={imagenes}/>
+				{/* atributo = {variables}, al atributo le ponemos el nombre que queramos */}
 			
 		</div>
 	);
