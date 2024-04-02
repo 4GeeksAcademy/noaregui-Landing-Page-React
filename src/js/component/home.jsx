@@ -42,17 +42,18 @@ const imagenes = [
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<div className="container">
-				<Navbar props={navLanding}/>
+		<>
+			{/* Pongo el Navbar fuera para que ocupe la página de lado a lado, sino ocupa lo mismo que el Jumbotron y las imagenes */}
+			<Navbar props={navLanding}/> asd
+			<div className="text-center">
+				<div className="container">
+					<Jumbotron props={jumbotronLanding}/>
+				</div>
+					<Card atributoImagenes={imagenes}/>
+					{/* atributo = {variables}, al atributo le ponemos el nombre que queramos */}
+				
 			</div>
-			<div className="container">
-				<Jumbotron props={jumbotronLanding}/>
-			</div>
-				<Card atributoImagenes={imagenes}/>
-				{/* atributo = {variables}, al atributo le ponemos el nombre que queramos */}
-			
-		</div>
+		</>
 	);
 };
 
